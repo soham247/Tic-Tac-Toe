@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#reset");
 let newGameBtn = document.querySelector("#newbtn");
 let msgcontainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let blurElement = document.querySelector(".blur-element");
 
 let turnO = true; // player O
 let btnClickCounter = 0; // tracks how many times the button has been clicked
@@ -25,6 +26,7 @@ const resetGame = () => {
     btnClickCounter = 0;
     draw = true;
     msgcontainer.classList.add("hide");
+    blurElement.classList.remove("blur");
 };
 
 boxes.forEach((box) => {
@@ -59,6 +61,7 @@ const disableBoxes = () => {
 const showWinner = (winner) =>{
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgcontainer.classList.remove("hide");
+    blurElement.classList.add("blur");
     disableBoxes();
 };
 

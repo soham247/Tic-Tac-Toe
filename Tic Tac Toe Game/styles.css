@@ -7,6 +7,9 @@ body{
     background-color: rgb(26, 25, 25);
     text-align: center;
 }
+.blur{
+    filter: blur(3px);
+}
 header{
     color: blue;
     font-size: 2rem;
@@ -48,12 +51,22 @@ header{
     border: none;
 }
 .msg-container{
-    height: 100vmin;
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50vh;
+    width: 55vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 4rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    z-index: 1;
 }
 #msg{
     color: #0000ff;
